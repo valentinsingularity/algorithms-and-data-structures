@@ -42,12 +42,12 @@ void randomized_quicksort(int A[],int p,int r)
 {
 	if(p<r)
 	{
-		int indices[2];
+	    int indices[2];
 	    randomized_partition(A,p,r,indices);
 	    int q=indices[0];
 	    int t=indices[1];
-		randomized_quicksort(A,p,q-1);
-		randomized_quicksort(A,t+1,r);
+	    randomized_quicksort(A,p,q-1);
+	    randomized_quicksort(A,t+1,r);
 	}
 }
 
@@ -62,9 +62,9 @@ int main()
 	cout<<endl;
 	
 	srand(time(NULL));
-    for(i=1;i<=n;i++) 
+        for(i=1;i<=n;i++) 
 	{
-		srt_seq[i]=i;
+                srt_seq[i]=i;
 		rev_seq[i]=n-i+1;
 		rand_seq[i]=rand()%1001;
 	}
