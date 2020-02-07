@@ -39,7 +39,7 @@ void DEQueue::EnqueueRear(int x)
 	{
 		cout<<"Overflow";
 		exit(0);
-    }
+        }
 	else
 	{
 		if(reseted) A[A.size()-1]=x;
