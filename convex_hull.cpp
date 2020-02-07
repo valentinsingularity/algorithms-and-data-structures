@@ -31,7 +31,7 @@ int main()
 	   	   	       {
 	   	   	       	     det=determinant(x[i],y[i],x[j],y[j],x[k],y[k]);
  	   	   	       	     if(det>0) s++;
-						 else if(det<0) s--; 	   	   	       	     
+				     else if(det<0) s--; 	   	   	       	     
 	   	   	       }
 	   	   	  if(s == -(n-2) || s == n-2 )
 			  {
