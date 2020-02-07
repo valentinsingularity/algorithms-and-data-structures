@@ -27,7 +27,7 @@ int main()
 	cin>>n>>k;
 	vector<int> A(n+1);
 	for(i=1;i<=n;i++) cin>>A[i];
-    A=CountingSort(A,n,k);
+        A=CountingSort(A,n,k);
 	for(i=1;i<=n;i++) cout<<A[i]<<" ";
 	
 	return 0;
