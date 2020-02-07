@@ -23,11 +23,11 @@ class Object{
 
 string ObjSearch(int k,vector< vector<Object> > T)
 {
-	int m,j,nj,aj,bj,h2;
-	m=T.size();
-	j=k%m;
-	Object obj;
-	obj=T[j][T[j].size()-3];
+    int m,j,nj,aj,bj,h2;
+    m=T.size();
+    j=k%m;
+    Object obj;
+    obj=T[j][T[j].size()-3];
     nj=obj.k;
     obj=T[j][T[j].size()-2];
     aj=obj.k;
@@ -41,8 +41,8 @@ int main()
 {
 	
     unsigned int n,m,i,j;
-	int k,h1,h2,aj,bj,nj,ok;
-	string name;
+    int k,h1,h2,aj,bj,nj,ok;
+    string name;
     cin>>n>>m;
     vector<Object> unordered_list(n);
     vector< vector<Object> > obj_list(m);
@@ -72,7 +72,7 @@ int main()
     	  for(i=0;i<obj_list[j].size();i++)  //obtain h2 without collisions
     	  {  	
     	       k=obj_list[j][i].k;
-    		   h2=(aj*k+bj)%(nj*nj);
+    	       h2=(aj*k+bj)%(nj*nj);
                if(x[h2]==1)
                  {
                  	ok=0;
@@ -88,8 +88,8 @@ int main()
     	  {  	
     	       Object obj=obj_list[j][i];
     	       k=obj.k;
-    		   h2=(aj*k+bj)%(nj*nj);
-    		   T[j][h2]=obj;
+    	       h2=(aj*k+bj)%(nj*nj);
+    	       T[j][h2]=obj;
           }
 		T[j][nj*nj]= Object("nj",nj);
 		T[j][nj*nj+1]= Object("aj",aj);
