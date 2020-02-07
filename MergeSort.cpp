@@ -46,10 +46,10 @@ void MergeSort(int A[],int n)
 
 int main()
 {
-	int n,i,j,srt_seq[NMAX],rev_seq[NMAX],rand_seq[NMAX];
-	cin>>n;
+    int n,i,j,srt_seq[NMAX],rev_seq[NMAX],rand_seq[NMAX];
+    cin>>n;
 	
-	srand(time(NULL));
+    srand(time(NULL));
     for(i=1;i<=n;i++) 
 	{
 		srt_seq[i]=i;
@@ -85,5 +85,5 @@ int main()
     cout<<"Average random time: "<<sum/10<<" milliseconds"<<endl;
     
     	
-	return 0;
+    return 0;
 }
