@@ -7,7 +7,7 @@ void printOptimalMultiplication(vector< vector<int> > order,int i, int j)
 {
 	if(i==j)
 	{
-		cout<<"A"<<i;
+	    cout<<"A"<<i;
 	} 
 	else
 	{
@@ -17,7 +17,7 @@ void printOptimalMultiplication(vector< vector<int> > order,int i, int j)
 	    cout<<" * ";
 	    printOptimalMultiplication(order,k+1,j);
 	    cout<<")";
-    }
+        }
 }
 
 int main()
@@ -32,20 +32,20 @@ int main()
 	
 	for(i=1;i<=n;i++) 
 	{
-		cin>>k>>l;
-		if(i==1) 
-		{
+	    cin>>k>>l;
+            if(i==1) 
+		 {
 		   dim[i-1]=k;
 		   dim[i]=l;
-	    }
+	         }
 	    else if(k!=dim[i-1])
 	         {
-	        	cout<<"Incompatible dimensions"<<endl;
-	        	exit(0);
+	            cout<<"Incompatible dimensions"<<endl;
+	            exit(0);
 	         }
 	         else
 	         {
-	         	dim[i]=l;
+	            dim[i]=l;
 	         }
 	}		  
 	
@@ -60,11 +60,11 @@ int main()
         	order[i][j]=k;
         	for(k=i+1;k<j;k++)
         	{
-        	        r=m[i][k]+m[k+1][j]+dim[i-1]*dim[k]*dim[j];
+        	                r=m[i][k]+m[k+1][j]+dim[i-1]*dim[k]*dim[j];
         		  	if(r < m[i][j]) 
 					{
 						m[i][j]=r;
-        	     	  	order[i][j]=k;
+        	     	  	                order[i][j]=k;
 					}
         	}   	
         }
@@ -74,5 +74,5 @@ int main()
     cout<<"Minimum number of scalar multiplications: "<<m[1][n]<<endl;
     printOptimalMultiplication(order,1,n);
 	
-	return 0;
+    return 0;
 }
