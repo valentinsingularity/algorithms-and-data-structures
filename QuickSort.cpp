@@ -35,12 +35,12 @@ void quicksort(int A[],int p,int r)
 {
 	if(p<r)
 	{
-		int indices[2];
+	    int indices[2];
 	    partition(A,p,r,indices);
 	    int q=indices[0];
 	    int t=indices[1];
-		quicksort(A,p,q-1);
-		quicksort(A,t+1,r);
+	    quicksort(A,p,q-1);
+	    quicksort(A,t+1,r);
 	}
 }
 
